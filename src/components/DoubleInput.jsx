@@ -9,7 +9,7 @@ const Input = (props) => {
             <InputLabel for={props.name} content={props.content} />
             <TextInput className={props.className} name={props.name} placeholder={props.placeholder1} />
             <TextInput className={props.className} name={props.name} placeholder={props.placeholder2} />
-            {/* <InvalidInputLabel msg={props.msg} /> */}
+            <InvalidInputLabel msg={props.msg} />
         </div>
     );
 }

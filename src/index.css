@@ -7,7 +7,7 @@
 	--active-input-border-from: hsl(249, 99%, 64%);
 	--active-input-border-to: hsl(278, 94%, 30%);
 	
-	--active-input-border-linear-gradient: linear-gradient(90deg, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+	--active-input-border-linear-gradient: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
 	
 	/* * NEUTRAL COLORS */
 	--white: hsl(0, 0%, 100%);
@@ -45,11 +45,7 @@ body {
 	height: 100%;
 }
 
-.container {
-	width: 305px;
-}
-
-#inputForm {
+.main {
 	/* border: 1px solid black; */
 
 	position: absolute;
@@ -75,16 +71,18 @@ body {
 	margin: 5px 0 0;
 
 	padding: 8px 13px;
-	width: 295px;
+	/* width: 295px; */
+	width: 100%;
 
 	font-weight: 500;
 	font-size: 15px;
 	color: var(--very-dark-violet);
 	
 }:focus {
-	border-color: var(--active-input-border-linear-gradient);
+	border-image-slice: 1;
+	border-image-source: var(--active-input-border-linear-gradient);
+	
 	outline: none;
-
 }::placeholder {
 	color: var(--dark-grayish-violet);
 	font-weight: 500;
@@ -101,7 +99,7 @@ body {
 .doubleTextInput {
 	border: 1px solid var(--light-grayish-violet);
 	border-radius: 5px;
-	margin: 5px 8px 15px 0;
+	margin: 5px 8px 0px 0;
 
 	padding: 8px 13px;
 	width: 65px;
@@ -112,7 +110,8 @@ body {
 
 	
 }:focus {
-	border-color: var(--active-input-border-linear-gradient);
+	border-image-slice: 1;
+	border-image-source: var(--active-input-border-linear-gradient);
 	outline: none;
 
 }::placeholder {
@@ -142,7 +141,8 @@ body {
 	color: var(--very-dark-violet);
 	
 }:focus {
-	border-color: var(--active-input-border-linear-gradient);
+	border-image-slice: 1;
+	border-image-source: var(--active-input-border-linear-gradient);
 	outline: none;
 
 }::placeholder {
@@ -162,12 +162,50 @@ body {
 	padding: 13px;
 	width: 100%;
 	cursor: pointer;
+	font-size: 14px;
 }
 
 .invalidInputLabel {
 	color: var(--input-error-red);
 	font-size: 10px;
-	margin-top: 15px;
+	margin: 7px 0 12px;
 }
 
+.formLowerDiv {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
 
+.thankYou-container {
+	display: flex;
+	flex-direction: column;
+	justify-content:space-between;
+	align-items: center;
+
+	padding: 27px 0 0;
+	height: 250px;
+}
+
+.iconComplete {
+	width: 65px;
+}
+
+.thankYou-container h1 {
+	color: var(--very-dark-violet);
+	font-weight: 600;
+	font-size: 22px;
+	letter-spacing: 3px;
+	margin: 25px 0 0;
+}
+
+.thankYou-container p {
+	color: var(--dark-grayish-violet);
+	font-size: 14.5px;
+	/* letter-spacing: 1px; */
+	margin: 15px 0 0;
+}
+
+.thankYou-container Button {
+	margin-top: 40px;
+}
