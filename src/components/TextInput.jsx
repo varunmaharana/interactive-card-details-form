@@ -1,8 +1,18 @@
 import React from "react";
 
 const TextInput = (props) => {
+
     return (
-        <input className={props.className || "textInput"} type="text" name={props.name} placeholder={props.placeholder} />
+        <input
+            onChange={props.DOMevent}
+
+            className={props.className + " textInput"}
+            id={props.id}
+            type="text"
+            name={props.name}
+            placeholder={props.placeholder}
+            value={props.value}
+        />
     );
 }
 

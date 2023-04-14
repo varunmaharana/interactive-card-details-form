@@ -7,8 +7,8 @@ const Input = (props) => {
     return (
         <div className="doubleTextInputDiv">
             <InputLabel for={props.name} content={props.content} />
-            <TextInput className={props.className} name={props.name} placeholder={props.placeholder1} />
-            <TextInput className={props.className} name={props.name} placeholder={props.placeholder2} />
+            <TextInput DOMevent={props.DOMevent} id={props.id1} className={props.className} name={props.name + "-M"} placeholder={props.placeholder1}  value={props.valueM} />
+            <TextInput DOMevent={props.DOMevent} id={props.id2} className={props.className} name={props.name + "-Y"} placeholder={props.placeholder2} value={props.valueY} />
             <InvalidInputLabel msg={props.msg} />
         </div>
     );

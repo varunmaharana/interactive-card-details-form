@@ -8,7 +8,10 @@ const ThankYou = (props) => {
             <img className="iconComplete" src={iconComplete} alt="" />
             <h1>THANK YOU!</h1>
             <p>We've added your card details</p>
-            <Button text="Continue" />
+            <Button
+                text="Continue"
+                DOMevent={props.ButtonDOMevent}
+            />
         </div>
     );
 }

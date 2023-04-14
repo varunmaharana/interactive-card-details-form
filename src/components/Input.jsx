@@ -7,7 +7,14 @@ const Input = (props) => {
     return (
         <div className={props.className ? props.className + "Div" : null}>
             <InputLabel for={props.name} content={props.content} />
-            <TextInput className={props.className || null} name={props.name} placeholder={props.placeholder} />
+            <TextInput
+                DOMevent={props.DOMevent}
+                className={props.className}
+                id={props.id}
+                name={props.name}
+                placeholder={props.placeholder}
+                value={props.value}
+            />
             <InvalidInputLabel msg={props.msg} />
         </div>
     );

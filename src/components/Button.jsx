@@ -2,7 +2,13 @@ import React from "react";
 
 const Button = (props) => {
     return (
-        <button className="button">{props.text}</button>
+        <button
+            onClick={props.DOMevent}
+            className="button"
+            type={props.type}
+        >
+            {props.text}
+        </button>
     );
 };
 
